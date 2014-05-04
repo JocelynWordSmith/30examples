@@ -1,0 +1,419 @@
+/*example 1. spinning icon*/
+.container {
+	width: 70px;
+	height: 70px;
+	background-color: red;
+	position: relative;
+
+}
+.test1 {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+}
+
+@-webkit-keyframes rspin {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rspin {
+    -webkit-animation: rspin 2s linear infinite;
+}
+.test2 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+}
+
+@-webkit-keyframes lspin {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+.lspin {
+    -webkit-animation: lspin 2s linear infinite;
+}
+.center {
+	width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 15%;
+    left: 15%;
+}
+
+/*example 2*/
+
+.bouncespace {
+	width: 75px;
+	height: 100px;
+	position: relative;
+	background-color: blue;
+}
+.bounceball {
+	width: 25px;
+	height: 25px;
+	left: 25px;
+	position: absolute;
+	background-color: red;
+	border-radius: 50%
+}
+	
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        
+    }
+    95% {
+    	width: 25px;
+		height: 25px;
+    }
+   	100% {
+	-webkit-transform: translate(0px, 75px);
+	width: 28px;
+	height: 22px;
+    }
+}
+
+.bounce {
+    -webkit-animation: bounce .7s .1s ease-in infinite alternate;
+}
+
+/*example 3. rotating circles*/
+.background {
+	height: 400px;
+	width: 400px;
+	background-color: gray;
+	position: relative;
+}
+.circle1 {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: red;
+	left: 0;
+	top: 175px;
+}
+@-webkit-keyframes slidel {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        height: 50px;
+		width: 50px;
+		/*z-index: 1;*/
+    }
+    25% {
+    	height: 25px;
+    	width: 25px;
+    	-webkit-transform: translate(150px, -8px);
+    	z-index: 0;
+    }
+    50% {
+    	height: 50px;
+		width: 50px;
+		-webkit-transform: translate(350px, 0px);
+    }
+    75% {
+    	height: 100px;
+		width: 100px;
+		-webkit-transform: translate(100px, -25px);
+		z-index: 1;
+    }
+    100% {
+    	-webkit-transform: translate(0px, 0px);
+        height: 50px;
+		width: 50px;
+    }
+}
+
+.slidel {
+    -webkit-animation: slidel 2s 0s linear infinite;
+}
+
+
+.circle2 {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: blue;
+	right: 0;
+	top: 175px;
+}
+@-webkit-keyframes slider {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        height: 50px;
+		width: 50px;
+		/*z-index: 1;*/
+    }
+    25% {
+    	height: 100px;
+    	width: 100px;
+    	-webkit-transform: translate(-150px, -25px);
+    	z-index: 1;
+    }
+    50% {
+    	height: 50px;
+		width: 50px;
+		-webkit-transform: translate(-350px, 0px);
+		
+    }
+    75% {
+    	height: 25px;
+		width: 25px;
+		-webkit-transform: translate(-225px, -8px);
+		z-index: 0;
+    }
+    100% {
+    	-webkit-transform: translate(0px, 0px);
+        height: 50px;
+		width: 50px;
+    }
+    
+}
+
+.slider {
+    -webkit-animation: slider 2s 0s linear infinite;
+}
+
+/*example 5*/
+
+.face {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: yellow;
+	position: relative;
+}
+.eyel {
+	width: 20px;
+	height: 15px;
+	position: absolute;
+	background-color: black;
+	border-radius: 50%;
+	top: 20px;
+	left: 20px;
+}
+.eyer {
+	width: 20px;
+	height: 15px;
+	position: absolute;
+	background-color: black;
+	border-radius: 50%;
+	top: 20px;
+	right: 20px;
+}
+.mouth {
+	width: 30px;
+	height: 5px;
+	position: absolute;
+	background-color: black;
+	top: 60px;
+	left: 35px;
+}
+.tongue {
+	width: 10px;
+	height: 0px;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	position: absolute;
+	background-color: red;
+	top: 65px;
+	left: 45px;
+}
+@-webkit-keyframes out {
+	0% {
+		height: 0px;
+	}
+	5% {
+		height: 15px;
+	}
+	10% {
+		height: 0px;
+	}
+	100% {
+		height: 0px;
+	}
+
+    
+}
+
+.out {
+    -webkit-animation: out 5s 0s linear infinite;
+}
+
+@-webkit-keyframes blink {
+	0% {
+		-webkit-transform: scale(1,1);
+	}
+	10% {
+		-webkit-transform: scale(1,.2);
+	}
+	20% {
+		-webkit-transform: scale(1,1);
+	}
+	50% {
+		-webkit-transform: scale(1,1);
+	}
+	100% {
+		-webkit-transform: scale(1,1);
+	}
+}
+.blink {
+    -webkit-animation: blink 3s 0s linear infinite;
+}
+
+/*example 6. megaman*/
+
+.boundbox {
+	position: relative;
+	width: 356px;
+	height: 357px;
+}
+.mans {
+	position: absolute;
+}
+
+@-webkit-keyframes manrunc {
+	0% {
+		opacity: 1;
+	}
+	32% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.manrunc {
+    -webkit-animation: manrunc .3s 0s linear infinite;
+}
+@-webkit-keyframes manrunb {
+	0% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 1;
+	}
+	65% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.manrunb {
+    -webkit-animation: manrunb .3s 0s linear infinite;
+}
+@-webkit-keyframes manruna {
+	0% {
+		opacity: 1;
+	}
+	98% {
+		opacity: 1;
+	}
+	99% {
+		opacity: 0;
+	}
+}
+.manruna {
+    -webkit-animation: manruna .3s 0s linear infinite ;
+}
+
+/*example 7*/
+
+.boundbox2 {
+	height: 200px;
+	width:100%;
+	position: relative;
+	/*background-color: gray;*/
+}
+.sbox {
+	height: 200px;
+	width: 200px;
+	background-color: red;
+	position: absolute;
+	-webkit-animation: colorb .7s 0 linear infinite;
+
+}
+@-webkit-keyframes colorb {
+	0% {
+		background-color: red;
+	}
+	50% {
+		background-color: blue;
+	}
+	100% {
+		background-color: yellow;
+	}
+}
+.slidey {
+	height: 200px;
+	width: 200px;
+	-webkit-animation: slideb 2s 0 linear infinite;
+}
+@-webkit-keyframes slideb {
+	0% {
+        -webkit-transform: translate(0, 0);
+	}
+    
+    50% { 
+        -webkit-transform: translate(900px, 0);
+    }
+	100% {
+		-webkit-transform: translate(0, 0);
+	}
+}
+.turny {
+	height: 200px;
+	width: 200px;
+	-webkit-animation: turnb .3s 0 linear infinite;
+}
+@-webkit-keyframes turnb {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+	
+}
+
+/*example 8*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
