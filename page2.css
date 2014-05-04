@@ -491,9 +491,127 @@
 
 /*example 9*/
 
+.fabulous {
+	height: 100px;
+	width: 1000px;
+	background-color: gray;
+	position: relative;
+}
+.unicorn {
+	height: 100px;
+	width: 108px;
+	position: absolute;
+	left: 1000px;
+	
+	visibility: hidden;
+}
+.yeah {
+	font-size: 100px;
+	color: white;
+	visibility: hidden;
+}
+.fabulous:hover .unicorn {
+	visibility: visible;
+	-webkit-animation: fab 1s 0 linear infinite;
+}
+@-webkit-keyframes fab {
+	0% { left: 898px;
+	}
+	100% {
+		left: -108px;
+	}
+}
+.fabulous:hover {
+	-webkit-animation: colorb .7s 0 linear infinite;
+}
+@-webkit-keyframes colorb {
+	0% {
+		background-color: red;
+	}
+	50% {
+		background-color: blue;
+	}
+	100% {
+		background-color: yellow;
+	}
+}
+.fabulous:hover .yeah {
+	visibility: visible;
+}
 
+/*example 10*/
 
+.newtons {
+	width: 500px;
+	height: 100px;
+	background-color: gray;
+	position: relative;
+	left: 300px;
 
+}
+.newtons div {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: red;
+	position: absolute;
+}
+.newt1{
+	left: 0px;
+	-webkit-transform-origin: 200px -500px;
+	-webkit-animation: swingl 1.5s 0 linear infinite;
+}
+@-webkit-keyframes swingl {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	25% {
+		-webkit-transform: rotate(35deg);
+	}
+	30% {
+		-webkit-transform: rotate(30deg);
+	}
+	45% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+	}
+}
+
+.newt2{
+	left: 100px;
+}
+.newt3{
+	left: 200px;
+}
+.newt4{
+	left: 300px;
+}
+.newt5{
+	left: 400px;
+	-webkit-transform-origin: -200px -500px;
+	-webkit-animation: swingr 1.5s 0 linear infinite;
+}
+@-webkit-keyframes swingr {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	
+	50% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	75% {
+		-webkit-transform: rotate(-35deg);
+	}
+	80%{
+		-webkit-transform: rotate(-30deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+	}
+}
 
 
 
