@@ -1,3 +1,12 @@
+.entry {
+	border: solid black 3px;
+	background-color: gray;
+	padding:5px;
+	margin-bottom: 5px;
+}
+.entry h1 {
+	text-align: center;
+}
 /*example 1. spinning icon*/
 .container {
 	width: 70px;
@@ -411,6 +420,7 @@
 	position: relative;
 	margin-top: 20px;
 	transition: all 1s 0 ease;
+	border: solid black 3px;
 }
 
 .bar1 {
@@ -496,6 +506,7 @@
 	width: 1000px;
 	background-color: gray;
 	position: relative;
+	border: solid black 3px;
 }
 .unicorn {
 	height: 100px;

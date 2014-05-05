@@ -1,3 +1,12 @@
+.entry {
+	border: solid black 3px;
+	background-color: gray;
+	padding:5px;
+	margin-bottom: 5px;
+}
+.entry h1 {
+	text-align: center;
+}
 .example1 * {
 	margin: 5px;
 	
