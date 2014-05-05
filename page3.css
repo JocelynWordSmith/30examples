@@ -3,6 +3,7 @@
 	background-color: gray;
 	padding:5px;
 	margin-bottom: 5px;
+	-webkit-animation: colorb .7s 0 linear infinite;
 }
 .entry h1 {
 	text-align: center;
@@ -124,7 +125,283 @@
 	-webkit-transform: rotateX(360deg);
 }
 
+/*example 4*/
+.glowbox {
+	width: 200px;
+	height: 200px;
+	background-color: #3A46F2;
+	-webkit-animation: glowb 2s 0 linear infinite alternate;
+	border-radius: 50%;
+}
+@-webkit-keyframes glowb {
+	0% {
+		box-shadow: 0 0 0px 0px #8D94F0;
+	}
+	100% {
+		box-shadow: 0 0 5px 15px #8D94F0;
+	}
+}
 
+/*example 5*/
+.pinwheelb {
+	height: 110px;
+	position: relative;
+}
+.pins {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	background-color: red;
+	-webkit-transform: skew(30deg, 40deg);
+}
+.pin1 {
+	background-color: blue;
+	-webkit-animation: pinq 1s 0 linear infinite;
+}
+@-webkit-keyframes pinq {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+	
+}
+.pin2 {
+	background-color: green;
+	-webkit-animation: pinw 1s 0 linear infinite;
+}
+@-webkit-keyframes pinw {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(-360deg);
+	}
+	
+}
+.pin3 {
+	background-color: yellow;
+	-webkit-animation: pine .8s 0 linear infinite;
+}
+@-webkit-keyframes pine {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+	
+}
+.pin4 {
+	background-color: red;
+	-webkit-animation: pinr .8s 0 linear infinite;
+}
+@-webkit-keyframes pinr {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(-180deg);
+	}
+	
+}
+.pinm {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	border-radius: 50%;
+	background-color: blue;
+}
+/*example 6*/
+.holster {
+	height: 300px;
+	position: relative;
+}
+.midcircle {
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	left: 400px;
+	top: 140px;
+	background-color: blue;
+	border-radius: 50%;
+	
+}
+
+.closecircle {
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	left: 400px;
+	top: 170px;
+	background-color: blue;
+	border-radius: 50%;
+	-webkit-animation: closer .8s 0 linear infinite;
+	-webkit-transform-origin: 0px -30px;
+
+}
+@-webkit-keyframes closer {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+.outcircle {
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	left: 400px;
+	top: 190px;
+	background-color: blue;
+	border-radius: 50%;
+	-webkit-animation: outr .6s 0 linear infinite;
+	-webkit-transform-origin: 0px -50px;
+}
+@-webkit-keyframes outr {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(-360deg);
+	}
+}
+.farcircle {
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	left: 400px;
+	top: 210px;
+	background-color: blue;
+	border-radius: 50%;
+	-webkit-animation: farr 1s 0 linear infinite;
+	-webkit-transform-origin: 0px -70px;
+}
+@-webkit-keyframes farr {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+/*example 7*/
+.wordbox {
+	height: 45px;
+}
+.growword {
+	font-family: 'helvetica';
+	font-size: 17px;
+	color: green;
+	-webkit-animation: groww 2s 0 linear infinite alternate;
+	
+}
+@-webkit-keyframes groww {
+	0% {
+		font-size: 17px;
+	}
+	
+	100% {
+		font-size: 40px;
+	}
+}
+
+/*example 8*/
+.trapbox {
+	position: relative;
+	height: 100px;
+	background-color: teal;
+}
+.trap1 {
+	width: 100px;
+	height: 100px;
+	float: left;
+	transition: all 0.4s 0s ease;
+	background-color: lime;
+}
+.trap2 {
+	width: 100px;
+	height: 100px;
+	float: right;
+	transition: all 0.4s 0s ease;
+	background-color: lime;
+}
+.trapbox:hover .trap1 {
+	-webkit-transform: skew(10deg, 15deg);
+}
+.trapbox:hover .trap2 {
+	-webkit-transform: skew(-10deg,-15deg);
+}
+
+/*example9*/
+.boxbox {
+	height: 110px;
+
+}
+.boxy {
+	height: 100px;
+	width: 100px;
+	float: left;
+	background-color: purple;
+	margin: 5px;
+}
+.boxbox1:hover {
+	opacity: 0;
+}
+.boxbox2:hover {
+	opacity: 0;
+}
+.boxbox3:hover {
+	opacity: 0;
+}
+.boxbox4:hover {
+	opacity: 0;
+}
+.boxbox5:hover {
+	opacity: 0;
+}
+.boxbox6:hover {
+	opacity: 0;
+}
+.boxbox7:hover {
+	opacity: 0;
+}
+.boxbox8:hover {
+	opacity: 0;
+}
+.boxbox9:hover {
+	opacity: 0;
+}
+.boxbox10:hover {
+	opacity: 0;
+}
+
+
+/*example 10*/
+.heman {
+	height: 50px;
+	width: 50px;
+	left: 500px;
+	background: white;
+	position: relative;
+
+}
+.heman img {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	bottom: 0;
+	left:0;
+	
+}
+.heman:active img {
+	-webkit-transform: scale(50,50);
+	transition: all 10s 0s linear;
+
+}
 
 
 
